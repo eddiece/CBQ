@@ -1,0 +1,16 @@
+#Essa regra controla o trafego apenas na  porta 80 da rede local/interna
+RULE=144.14.4.0/24:80 # Não esqueça de colocar "," na regra de upload do outro arquivo
+
+#Essa regra controla o trafego de um IP apenas na porta 80
+RULE=144.14.4.35:80 # Não esqueça de colocar "," na regra de upload do outro arquivo
+
+#Essa regra seleciona apenas na minha rede local/interna
+RULE=144.14.4.0/24 # Não esqueça de colocar "," na regra de upload do outro arquivo
+
+#Controla o trafego vindo de qualquer origem, com destino entre a porta 50 a porta 5000
+RULE=:25,144.14.4.0/24:5000
+
+#Limita a banda em 5MB das 18:00 da noite até as 06:00 da manha
+#TIME=(hora inicial)-(hora final);(velocidade)/(velocidade/10)
+TIME=18:00-06:00;5120Kbit/512Kbit ## (1024z5=5120), (5120/10=512) 
+
