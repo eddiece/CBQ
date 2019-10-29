@@ -1,0 +1,20 @@
+#DEVICE -> Placa de rede que será tratada nessa regra
+DEVICE=eth0:1,100Mbit,10Mbit
+
+#RATE – -> Velocidade de Download total dessa Placa
+RATE=30720Kbit ## 30MB de Download (1024x30)
+
+#WEIGHT –> Velocidade de Download total dessa Placa (dividida por 10)
+WEIGHT=3072Kbit ## 30kbit de Download (30/10)
+
+#PRIO – Prioridade vai de 1 à 8 quanto mais alto menor a prioridade, o valor padrão é 5
+PRIO=5
+
+#RULE – Range de IP que sera tratada nessa regra
+RULE=192.168.1.0/24 ## Range da minha rede local/interna
+
+#BOUNDED – Não permite compartilhar banda entre as redes mesmo se tiver banda excedente
+BOUNDED=yes
+
+#ISOLATED – Banda excedente não sera compartilhada
+ISOLATED=yes
